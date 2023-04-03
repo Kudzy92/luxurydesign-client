@@ -1,7 +1,7 @@
 import { Email, LocationOn, Phone } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import React from 'react'
-import { sitemap } from '../data/placeholderData'
+import {sitemap_dress, sitemap_shop,sitemap_info } from '../data/placeholderData'
 import SocialMedia from './SocialMedia'
 import SiteLogo from './SiteLogo'
 
@@ -34,11 +34,44 @@ const Footer = () => {
         </div>
         <div className='footer-item'>
           <div className='title'>
-            <h3>Site map</h3>
+          <span className='line-hr'></span>
+            <h3>Information</h3>
           </div>
           <div className='content'>
            <ul>
-            {sitemap.map((item,i)=>{
+            {sitemap_info.map((item,i)=>{
+              return(
+              <li key={i}><Link className='f-link' to={item.url}>{item.name}</Link></li>
+              )
+            })}
+
+           </ul>
+          </div>
+        </div>
+        <div className='footer-item'>
+          <div className='title'>
+            <span className='line-hr'></span>
+            <h3>Buy a dress</h3>
+          </div>
+          <div className='content'>
+           <ul>
+            {sitemap_dress.map((item,i)=>{
+              return(
+              <li key={i}><Link className='f-link' to={item.url}>{item.name}</Link></li>
+              )
+            })}
+
+           </ul>
+          </div>
+        </div>
+        <div className='footer-item'>
+          <div className='title'>
+          <span className='line-hr'></span>
+            <h3>Shop</h3>
+          </div>
+          <div className='content'>
+           <ul>
+            {sitemap_shop.map((item,i)=>{
               return(
               <li key={i}><Link className='f-link' to={item.url}>{item.name}</Link></li>
               )
@@ -48,23 +81,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='footer-item'>
-          <div className='title'>
-            Logo
-          </div>
-          <div className='content'>
-           
-          </div>
-        </div>
-
-        <div className='footer-item'>
-          <div className='title'>
-            <h3>Instagram</h3>
-          </div>
-          <div className='content'>
-           
-          </div>
-        </div>
+        
 
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { EastOutlined, WestOutlined } from '@mui/icons-material';
+import { EastOutlined, ShoppingCartOutlined, WestOutlined } from '@mui/icons-material';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { homeHero } from '../data/placeholderData'
@@ -24,18 +24,20 @@ const Hero = () => {
     },[]);
    
   return (
-  <section className='home-hero' style={{...widthStyle,...transformStyle}}>
+  <section className='home-hero'>
+    <div className="overlay"></div>
+    <div className='home-hero-inner-container' style={{...widthStyle,...transformStyle}}>
         {homeHero.map((item,i)=>{
           return(
             <div  className={item.id===index+1 ? 'hero-item active' : 'hero-item'} key={i} style={{backgroundImage:"url("+item.img+")"}} >
             <div className='container'>
              <div className='wrapper'>
              <div className='hero-content-box'>
-              <div className='title1'><h3>{item.heading1}</h3></div>
+              <div className='title1'><span className='line-hr'></span> <h3>{item.heading1}</h3></div>
               <div className='title2'><h1>{item.heading2}</h1></div>
               <div className='description'><p>{item.description}</p></div>
               <div className='hero-btn'>
-                <span className='btn'>{item.btn}</span>
+                <span className='btn'><ShoppingCartOutlined/> {item.btn}</span>
               </div>
              </div>
              </div>
@@ -43,7 +45,7 @@ const Hero = () => {
             </div>
           )
         })}
-    
+    </div>
     </section>
     
   )

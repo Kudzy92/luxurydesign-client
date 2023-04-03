@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import dialogReducer from './dialogSlice'
+import checkoutReducer from './checkoutSlice'
 export default configureStore({
     reducer:{
         cart: cartReducer,
         dialog:dialogReducer,
+        checkout:checkoutReducer,
     },
 })
 /* 

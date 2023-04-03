@@ -2,6 +2,7 @@ import { LocationOn, Phone ,Email} from '@mui/icons-material';
 import React from 'react'
 import ContactForm from '../components/ContactForm';
 import MapCard from '../components/MapCard';
+import MobilePageHeader from '../components/MobilePageHeader'
 import  PageHeader  from '../components/PageHeader'
 import SocialMedia from '../components/SocialMedia';
 import  img1  from '../images/page-header/1.png'
@@ -17,14 +18,26 @@ const Contact = () => {
   ];
   return (
     <>
-    <PageHeader {...data}/>
+    
     <section className='contact'>
+    <PageHeader {...data}/>
+    <MobilePageHeader page1={'home'} page2={''} page3={'contact us'}/>
       <div className='container'>
         <div className='store-location'>
         <div className='wrapper'>
+
          <div className='sl-heading'>
-          <span>Our store address </span>
-          <h1>Visit us & shop</h1>
+         <div className='section-header'>
+        <div className="wrapper">
+            <div className="sht">
+                <div className="heading"><span className='line-hr'></span> <h3>Vist us today to,</h3></div>
+                <div className="title">
+                <h3>Our store address &</h3>
+               <h4>Find out stock in stores.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
          </div>
          <div className='sl-content'>
           <div className='sl-item'>
@@ -45,8 +58,17 @@ const Contact = () => {
         <div className='wrapper'>
         <div className='left-side'>
         <div className='sl-heading'>
-          <span>contact us </span>
-          <h1>GET IN TOUCH & SAY HELLO</h1>
+        <div className='section-header'>
+        <div className="wrapper">
+            <div className="sht">
+                <div className="heading"><span className='line-hr'></span> <h3>feel free to,</h3></div>
+                <div className="title">
+                <h3>Get in touch &</h3>
+                <h4>Say hello ...</h4>
+                </div>
+            </div>
+        </div>
+    </div>
          </div>
          <div className='description'>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim</p>
@@ -54,7 +76,7 @@ const Contact = () => {
          <SocialMedia/>
         </div>
         <div className='right-side'>
-          <ContactForm/>
+          <ContactForm name={"subject"}/>
         </div>
         </div>
         </div>

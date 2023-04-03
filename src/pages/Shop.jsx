@@ -12,6 +12,7 @@ import { products } from '../data/placeholderData'
 import ProductCard from '../components/ProductCard'
 import Brand from '../components/Brand'
 import ByMaterial from '../components/ByMaterial'
+import MobilePageHeader from '../components/MobilePageHeader'
 import ByColor from '../components/ByColor'
 import { Close, Filter1, ResetTv } from '@mui/icons-material'
 import { useSelector } from 'react-redux';
@@ -33,10 +34,10 @@ const dataInput=[ {
   text:'search products',
   }];
   return (
-    <>
- 
-    <PageHeader {...data}/>
+   
     <section className='shop'>
+    <PageHeader {...data}/>
+    <MobilePageHeader page1={'home'} page2={''} page3={'our shop'}/>
       <div className='container'>
         <div className='wrapper'>
           <div className={shopFilterDialog ? 'shop-filter active': 'shop-filter'}>
@@ -87,7 +88,6 @@ const dataInput=[ {
       </div>
     </section>
 
-    </>
   )
 }
 

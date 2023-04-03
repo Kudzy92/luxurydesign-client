@@ -5,6 +5,8 @@ import  img2  from '../images/page-header/4.png'
 import  img3  from '../images/page-header/11.png'
 import { faq } from '../data/placeholderData'
 import ToggleAccordonByIndex from '../components/ToggleAccordonByIndex'
+import MobilePageHeader from '../components/MobilePageHeader'
+import ContactForm from '../components/ContactForm'
 
 const Faq = () => {
 
@@ -17,9 +19,10 @@ const Faq = () => {
       ];
       
   return (
-    <>
-    <PageHeader {...data}/>
+
     <section className='faq'>
+        <PageHeader {...data}/>
+        <MobilePageHeader page1={'home'} page2={''} page3={'F.A.Q'}/>
         <div className='container'>
             <div className='wrapper'>
                 <div className='faq-content'>
@@ -31,12 +34,12 @@ const Faq = () => {
                 })}
                 </div>
                 <div className='faq-form'>
-                    faq contact form
+                <ContactForm name={"question"}/>
                 </div>
             </div>
         </div>
     </section>
-    </>
+
   )
 }
 

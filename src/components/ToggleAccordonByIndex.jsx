@@ -1,14 +1,16 @@
 import React, {useState } from 'react'
-import { Add, PlusOne } from '@mui/icons-material'
+import {AddOutlined, RemoveOutlined } from '@mui/icons-material'
 const ToggleAccordonByIndex = (props) => {
     const [index, setIndex]=useState(1);
+    const [isSelected, setIsSelected]=useState(false);
     const handleToggleAccClick=(i)=>{
         setIndex(i);
+        setIsSelected(!isSelected);
       }
   return (
-    <div className={index===props.i ? 'toggle-acc-item active' : 'toggle-acc-item'}>
+    <div className={index===props.i && isSelected ? 'toggle-acc-item active' : 'toggle-acc-item'}>
                             <div className='title' onClick={()=> handleToggleAccClick(props.i)}>
-                                <div className='fq-icon'>{index===props.i ? <Add/> : <PlusOne/>}</div>
+                                <div className='fq-icon'>{index===props.i ? <AddOutlined/> : <RemoveOutlined/>}</div>
                                 <h3>{props.title}</h3>
                             </div>
                             <div className="content">

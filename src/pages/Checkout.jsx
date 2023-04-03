@@ -6,11 +6,16 @@ import { Link, useNavigate } from "react-router-dom"
 import QtyChange  from '../components/QtyChange'
 import { removeProduct,getTotals } from '../redux/cartSlice'
 import { Close } from '@mui/icons-material';
+import { BASE_URL } from "../utils/apiURL";
+import axios from 'axios'
+import moment from 'moment'
 
 const Checkout = () => {
     const navigate= useNavigate();
   const dispatch=useDispatch();
     const cart= useSelector((state)=> state.cart);
+    const checkoutForm= useSelector((state)=> state.checkout.checkoutform);
+    console.log("CheckoutForm"+checkoutForm)
   const [paymethod,setPaymethod] =useState('eft');
   useEffect(()=>{
     dispatch(getTotals());
@@ -21,7 +26,32 @@ const Checkout = () => {
     dispatch(removeProduct(item));
     //dispatch(reset());
        }
-  const handleSaveCheckout = ()=>{}
+  const handleSaveCheckout = async ()=>{
+ const newCheckout={
+ fullname : checkoutForm.fullname,
+phonenumber: checkoutForm.phonenumber,
+email: checkoutForm.email,
+streetaddress: checkoutForm.streetaddress,
+unitaddress: checkoutForm.unitaddress,
+message: checkoutForm.message,
+paymethod: paymethod,
+totalamount: cart.cartTotalVATInc,
+deliveryamount: 100.50,
+vatamount: cart.cartVAT,
+ordermethod: "placed",
+orderstatus: "pending",
+pqty:cart.cartTotalQuantity,
+deliverykm:checkoutForm.deliverykm,
+orderdate:moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
+orderid:Date.now(),
+ };
+    try{
+      await axios.post(`${BASE_URL}/orders`, newCheckout);
+      console.log("Brand saved");
+    }catch(err){
+      console.log(err);
+    }
+  }
   return (
     <section className='ad-checkout'>
       <MobilePageHeader page1={'home'} page2={'shop'} page3={'checkout'}/>
@@ -39,7 +69,7 @@ const Checkout = () => {
         <span className='cart-count'>{cart.cartItems.length} item{cart.cartItems.length>1 ? 's':''}</span>
         </div>
         <div className={cart.cartItems.length>3 ? 'cart-body scroll' : 'cart-body'}>
-            
+            <div className='cart-body-inner'>
             
             {cart.cartItems?.map((item,i)=>{
                 return(
@@ -63,7 +93,7 @@ const Checkout = () => {
                 </div>
                 )
             })}
-            
+            </div>
 
 
 
@@ -101,6 +131,14 @@ const Checkout = () => {
         <div className='box-item-row'>
             <div className='pay-method-title'><span className={paymethod==='payfast'?'check-box active':'check-box'} onClick={()=>setPaymethod('payfast')}></span><h3>Pay via payfast</h3></div>
             <div className='des-pay-method'>{paymethod==='payfast' ? <p>Kindly use payfast as the payment gateway</p>: ''}</div>
+        </div>
+        <div className='box-item-row'>
+            <div className='pay-method-title'><span className={paymethod==='float'?'check-box active':'check-box'} onClick={()=>setPaymethod('float')}></span><h3>Pay in installments using float</h3></div>
+            <div className='des-pay-method'>{paymethod==='payfast' ? <p>
+              Enjoy now, pay later & pay with credit cards only in installments.
+              You must have full amount of your purchase available in your credit limit.
+              You will be redirected to Float to securely complete your payment.
+            </p>: ''}</div>
         </div>
 
         <div className='box-item-row'>

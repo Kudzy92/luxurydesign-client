@@ -41,6 +41,7 @@ const BottomBar = () => {
  const handleClickMenuLink =(i)=>{
 	setSelectedIndex(i);
 	dispatch(reset());
+	setIsMenuOpen(false);
  }
   //const screenWidth=MobileQuery.
   //const screenWidth=500;
@@ -88,7 +89,7 @@ const BottomBar = () => {
 		</div>
 		<div className='hd-icon cart' onClick={handleShowCart}>
 			<ShoppingCart/>
-			<span className="cart-count">{quantity}</span>
+			<span className="cart-count">{cart.cartItems.length}</span>
 		</div>
 	</div>
 	{screenWidth<=992 && !isMenuOpen ?<Menu className="menu-btn"   onClick={()=>handleOpenMenu()}/>:''}
