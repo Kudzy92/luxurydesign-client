@@ -3153,7 +3153,7 @@ font-size: 3rem;
 .testimonial .wrapper .tm-left{display:none;}
 .about-page .ld-team-container{grid-template-columns: repeat(1,1fr);}
 .home-cat-item-container{grid-template-columns: repeat(1,1fr);gap: 0;}
-.home-banner-1{background: transparent;}
+.home-banner-1{background: transparent !important;}
 .home-banner-1 .wrapper .hb1-left{display: none;}
 .home-banner-1 .wrapper .hb1-right{padding-left: 0;}
 .home-banner-1 .wrapper .body .form-row .form-control>input{
