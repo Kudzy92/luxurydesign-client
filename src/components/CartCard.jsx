@@ -1,10 +1,11 @@
-import { Close, ShoppingCartCheckout } from '@mui/icons-material';
-import React, { useEffect } from 'react'
+import { Close, ShoppingCartCheckout,GifOutlined} from
+ '@mui/icons-material';
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { openCartDialog,reset } from '../redux/dialogSlice'
-import { removeProduct,getTotals } from '../redux/cartSlice'
+import { removeProduct,getTotals,getCouponDiscount } from '../redux/cartSlice'
 import QtyChange from './QtyChange';
 
 
@@ -17,6 +18,15 @@ const CartCard = () => {
   const navigate= useNavigate();
   const dispatch = useDispatch();
   const cart= useSelector((state)=> state.cart);
+  const [coupon, setCoupon]=useState("");
+  const [couponRate, setCouponRate]=useState(0);
+
+  const handleApplyCoupon=()=>{
+    console.log("COupon code"+coupon);
+    //query form databse coupon discount rate
+    setCouponRate(0.08);
+    dispatch(getCouponDiscount(couponRate));
+  }
   useEffect(()=>{
     dispatch(getTotals());
   },[cart,dispatch]);
@@ -66,13 +76,44 @@ dispatch(reset());
           </div>
             )
          })
+         
          : ''}
+         
         </div>
         <div className='cart-bottom'>
           <div className='cart-total-wrapper'>
           <div className='box-item-row'>
+          <div className='box-item-row coupon-form'>
+                    <div className='checkout-product'>
+                    <div className='cp-left'>
+                    <div className='form-control-container'>
+        
+		<div className="form-control">
+	
+        <input 
+        type="text" 
+        onChange={(e)=> setCoupon(e.target.value)}
+        placeholder='Enter your coupon code.' 
+        />
+		
+		</div>
+    <span className="btn" onClick={handleApplyCoupon}><GifOutlined/>Apply coupon</span>
+        </div>
+       
+                    </div>
+                        <div className='cp-right'>
+                        
+                        </div>
+                    </div>
+                    </div>
+          </div>
+          <div className='box-item-row'>
                 <h3 className='total'>Subtotal</h3>
                 <span className='total'>R {cart.cartTotalAmount}</span>
+            </div>
+            <div className='box-item-row'>
+                <h3 className='total'>Cart coupon discount</h3>
+                <span className='total'>R {cart.cartCouponValue}</span>
             </div>
             <div className='box-item-row'>
                 <h3 className='total'>VAT</h3>

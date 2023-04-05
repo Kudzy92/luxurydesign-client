@@ -6,7 +6,7 @@ import  img3  from '../images/page-header/11.png'
 import MobilePageHeader from '../components/MobilePageHeader'
 import PrivacyItemContainer from '../components/PrivacyItemContainer'
 
-const TermsAndCondtion = () => {
+const ReturnRefunds = () => {
     
     const data=[
         {
@@ -33,4 +33,4 @@ const TermsAndCondtion = () => {
   )
 }
 
-export default TermsAndCondtion
+export default ReturnRefunds 

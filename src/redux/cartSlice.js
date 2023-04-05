@@ -9,6 +9,8 @@ const initialState = {
     cartTotalAmount: 0,
     cartTotalVATInc:0,
     cartVAT:0,
+    cartCouponRate:0,
+    cartCouponValue:0,
   };
 const cartSlice= createSlice({
 name:'cart',
@@ -121,6 +123,30 @@ removeProduct:(state,action)=>{
         state.cartTotalQuantity = quantity;
         state.cartTotalAmount = total;
       },
+      getCouponDiscount(state, action) {
+        let { total,quantity,cartCouponRate } = state.cartItems.reduce(
+          (cartTotal, cartItem) => {
+            const { nowprice, cartQuantity } = cartItem;
+            const itemTotal = nowprice * cartQuantity;
+  
+            cartTotal.total += itemTotal;
+            cartTotal.quantity += cartQuantity;
+            return cartTotal;
+          },
+          {
+            total: 0,
+            quantity: 0,
+          }
+          
+        );
+       
+        
+        state.cartCouponRate=action.payload;
+        //const tt=parseFloat(total)*parseFloat(cartCouponRate);
+        const tt=action.payload * total;;
+        console.log("action.payload"+action.payload+"Total"+total+"tt"+tt);
+            state.cartCouponValue = parseFloat(tt);
+      },
       clearCart(state, action) {
         state.cartItems = [];
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
@@ -134,5 +160,5 @@ removeProduct:(state,action)=>{
     }
 }
 });
-export const { addProduct ,removeProduct, incrementProduct, decreaseProduct, getTotals, clearCart, reset } =cartSlice.actions;
+export const { addProduct ,removeProduct, incrementProduct, decreaseProduct, getTotals, clearCart,getCouponDiscount, reset } =cartSlice.actions;
 export default cartSlice.reducer;

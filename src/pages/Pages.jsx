@@ -17,6 +17,8 @@ import Login from './Login'
 import Register from './Register'
 import PrivacyPolicy from './PrivacyPolicy'
 import Cart from './Cart'
+import DeliveryTerms from './DeliveryTerms'
+import ReturnRefunds from './ReturnRefunds'
 
 const Pages = () => {
   return (
@@ -28,6 +30,8 @@ const Pages = () => {
           <Route exact path='/about-us' element={<About/>} />
           <Route exact path='/shop' element={<Shop/>} />
           <Route exact path='/faq' element={<Faq/>} />
+          <Route exact path='/delivery-shipping-tcs' element={<DeliveryTerms/>} />
+          <Route exact path='/returns-refunds-tcs' element={<ReturnRefunds/>} />
           <Route exact path='/cart' element={<Cart/>} />
           <Route exact path='/privacy-policy' element={<PrivacyPolicy/>} />
           <Route exact path='/login' element={<Login/>} />
@@ -36,7 +40,7 @@ const Pages = () => {
           <Route exact path='/contact-us' element={<Contact/>} />
           <Route exact path='/checkout' element={<Checkout/>} />
           <Route exact path='/track-order' element={<TrackOrder/>} />
-          <Route exact path='/terms-and-conditions' element={<TermsAndCondtion/>} />
+          <Route exact path='/general-tcs' element={<TermsAndCondtion/>} />
 		  <Route path = "/search/:searchTerm" element = {<Search />} />
           <Route path="*" element={<NotFound/>}/>
   </Routes>

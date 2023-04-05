@@ -306,8 +306,18 @@ export const bottomBarLink=[
         },
         {
             id:5,
-            name:'Terms & conditions',
-            url:'/terms-and-condtions',
+            name:'Delivery & Shipping',
+            url:'/delivery-shipping-tcs',
+        },
+        {
+            id:6,
+            name:'Returns & Refunds',
+            url:'/returns-refunds-tcs',
+        },
+        {
+            id:7,
+            name:'General T & Cs',
+            url:'/general-tcs',
         },
         
       ];
