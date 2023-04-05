@@ -20,6 +20,9 @@ import pimg14 from '../images/products/14.png'
 import pimg15 from '../images/products/15.png'
 import pimg16 from '../images/products/16.png'
 import pimg17 from '../images/products/17.png'
+import pimg18 from '../images/products/18.png'
+import pimg19 from '../images/products/19.png'
+import pnoimg from '../images/products/no_img.png'
 
 import service_img1 from '../images/services/service-1.jpg'
 import service_img2 from '../images/services/service-2.jpg'
@@ -488,6 +491,262 @@ export const ppt_data=[
         description:"cfduid: Is used for our CDN CloudFlare to identify individual clients behind a shared IP address and apply security settings on a per-client basis. See more information on privacy here: CloudFlare Privacy Policy.PHPSESSID: To identify your unique session on the website.",
     },
 ];
+/*========================================================
+      PRODUCT SIZES START
+===============================================================*/
+ export const psize_number=[
+    {
+        id:1,
+        psize:8,
+        extraprice:19.8,
+        description:"for kids aged 5-8 years",
+    },
+    {
+        id:2,
+        psize:10,
+        extraprice:25.0,
+        description:"for kids aged 8-10 years",
+    },
+    {
+        id:3,
+        psize:12,
+        extraprice:39.7,
+        description:"for kids aged 10-12 years",
+    },
+    {
+        id:4,
+        psize:14,
+        extraprice:45.3,
+        description:"for kids aged 12-16 years",
+    },
+    {
+        id:5,
+        psize:16,
+        extraprice:50.2,
+        description:"for teenage aged 16-20 years",
+    },
+    {
+        id:6,
+        psize:18,
+        extraprice:55.1,
+        description:"",
+    },
+ ];
+ export const psize_bust=[
+    {
+        id:1,
+        psize:87,
+        extraprice:9.8,
+        description:"for kids aged 5-8 years",
+    },
+    {
+        id:2,
+        psize:89,
+        extraprice:5.0,
+        description:"for kids aged 8-10 years",
+    },
+    {
+        id:3,
+        psize:91.5,
+        extraprice:3.7,
+        description:"for kids aged 10-12 years",
+    },
+    {
+        id:4,
+        psize:94,
+        extraprice:4.3,
+        description:"for kids aged 12-16 years",
+    },
+    {
+        id:5,
+        psize:97,
+        extraprice:10.2,
+        description:"for teenage aged 16-20 years",
+    },
+    {
+        id:6,
+        psize:101,
+        extraprice:9.1,
+        description:"",
+    },
+ ];
+ export const psize_waist=[
+    {
+        id:1,
+        psize:66.5,
+        extraprice:0.0,
+        description:"for kids aged 5-8 years",
+    },
+    {
+        id:2,
+        psize:68.5,
+        extraprice:2.5,
+        description:"for kids aged 8-10 years",
+    },
+    {
+        id:3,
+        psize:71,
+        extraprice:9.7,
+        description:"for kids aged 10-12 years",
+    },
+    {
+        id:4,
+        psize:77,
+        extraprice:4.3,
+        description:"for kids aged 12-16 years",
+    },
+    {
+        id:5,
+        psize:81,
+        extraprice:7.2,
+        description:"for teenage aged 16-20 years",
+    },
+    {
+        id:6,
+        psize:86,
+        extraprice:9.1,
+        description:"",
+    },
+ ];
+ export const psize_hip=[
+    {
+        id:1,
+        psize:94,
+        extraprice:19.8,
+        description:"for kids aged 5-8 years",
+    },
+    {
+        id:2,
+        psize:96,
+        extraprice:25.0,
+        description:"for kids aged 8-10 years",
+    },
+    {
+        id:3,
+        psize:98.5,
+        extraprice:39.7,
+        description:"for kids aged 10-12 years",
+    },
+    {
+        id:4,
+        psize:101,
+        extraprice:45.3,
+        description:"for kids aged 12-16 years",
+    },
+    {
+        id:5,
+        psize:104,
+        extraprice:50.2,
+        description:"for teenage aged 16-20 years",
+    },
+    {
+        id:6,
+        psize:108,
+        extraprice:55.1,
+        description:"",
+    },
+ ];
+ export const psize_length=[
+    {
+        id:1,
+        psize:157.5,
+        extraprice:6.8,
+        description:"for kids aged 5-8 years",
+    },
+    {
+        id:2,
+        psize:158.5,
+        extraprice:5.0,
+        description:"for kids aged 8-10 years",
+    },
+    {
+        id:3,
+        psize:140.5,
+        extraprice:9.7,
+        description:"for kids aged 10-12 years",
+    },
+    {
+        id:4,
+        psize:130.5,
+        extraprice:45.3,
+        description:"for kids aged 12-16 years",
+    },
+    {
+        id:5,
+        psize:160.5,
+        extraprice:50.2,
+        description:"for teenage aged 16-20 years",
+    },
+    {
+        id:6,
+        psize:185.5,
+        extraprice:55.1,
+        description:"",
+    },
+ ];
+
+ 
+
+
+ export const productbysize=[
+    {
+        id:1,
+        pid:1,
+        pds_number_id:1,
+        pds_bust_id:3,
+        pds_waist_id:1,
+        pds_hip_id:2,
+        pds_length_id:2,
+    },
+    {
+        id:2,
+        pid:2,
+        pds_number_id:1,
+        pds_bust_id:4,
+        pds_waist_id:2,
+        pds_hip_id:1,
+        pds_length_id:3,
+    },
+    {
+        id:3,
+        pid:2,
+        pds_number_id:2,
+        pds_bust_id:2,
+        pds_waist_id:2,
+        pds_hip_id:2,
+        pds_length_id:4,
+    },
+    {
+        id:4,
+        pid:2,
+        pds_number_id:3,
+        pds_bust_id:1,
+        pds_waist_id:3,
+        pds_hip_id:4,
+        pds_length_id:1,
+    },
+    {
+        id:5,
+        pid:1,
+        pds_number_id:3,
+        pds_bust_id:2,
+        pds_waist_id:1,
+        pds_hip_id:3,
+        pds_length_id:3,
+    },
+    {
+        id:6,
+        pid:1,
+        pds_number_id:2,
+        pds_bust_id:3,
+        pds_waist_id:5,
+        pds_hip_id:4,
+        pds_length_id:2,
+    },
+ ];
+/*========================================================
+      PRODUCT SIZES END
+===============================================================*/
       export const instagram=[
         {
             id:1,
@@ -541,7 +800,7 @@ export const ppt_data=[
             name:'dress 1',
             cat:'party',
             brand:'Modern',
-            image:[pimg1,pimg2,pimg3],
+            image:[pimg1,pimg2,pimg3,],
             nowprice:2000,
             wasprice:2800,
             stock: 5,
@@ -664,6 +923,228 @@ export const ppt_data=[
     tags:['Short-Sleeve','Spring','Winter','Summer',],
 },
       ];
+export const products2=[
+    {
+    "id": 1,
+    "sku": "code01",
+    "name": "dress 1",
+    "catid": 1,
+    "brandid": 2,
+    "nowprice": 78.56,
+    "wasprice": 23.5,
+    "stock": 12,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 2,
+    "sku": "code02",
+    "name": "dress 2",
+    "catid": 1,
+    "brandid": 2,
+    "nowprice": 78.56,
+    "wasprice": 23.5,
+    "stock": 12,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 3,
+    "sku": "code03",
+    "name": "dress 3",
+    "catid": 1,
+    "brandid": 2,
+    "nowprice": 78.56,
+    "wasprice": 23.5,
+    "stock": 12,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 4,
+    "sku": "code04",
+    "name": "dress 4",
+    "catid": 2,
+    "brandid": 1,
+    "nowprice": 180,
+    "wasprice": 150.02,
+    "stock": 10,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wi duip ex e consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 5,
+    "sku": "code05",
+    "name": "dress 5",
+    "catid": 2,
+    "brandid": 1,
+    "nowprice": 180,
+    "wasprice": 190.02,
+    "stock": 10,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wi duip ex e consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 6,
+    "sku": "code02",
+    "name": "dress 6",
+    "catid": 2,
+    "brandid": 1,
+    "nowprice": 800,
+    "wasprice": 0,
+    "stock": 10,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wi duip ex e consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 7,
+    "sku": "code07",
+    "name": "dress 7",
+    "catid": 2,
+    "brandid": 1,
+    "nowprice": 2500,
+    "wasprice": 0,
+    "stock": 0,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wi duip ex e consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 8,
+    "sku": "code08",
+    "name": "dress 8",
+    "catid": 2,
+    "brandid": 1,
+    "nowprice": 600,
+    "wasprice": 400.02,
+    "stock": 2,
+    "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wi duip ex e consequat.",
+    "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    }
+    
+    ];
+
+    export const pcats=[
+        {
+        "id": 1,
+        "name": "party",
+        "img": null,
+        "catdesc": null
+        },
+        {
+        "id": 2,
+        "name": "morden",
+        "img": null,
+        "catdesc": null
+        },
+        {
+        "id": 3,
+        "name": "fashon",
+        "img": null,
+        "catdesc": null
+        }
+        ];
+export const pbrands=[
+    {
+    "id": 1,
+    "name": "african roots",
+    "img": null,
+    "bdesc": null
+    },
+    {
+    "id": 2,
+    "name": "guchi",
+    "img": null,
+    "bdesc": null
+    },
+    {
+    "id": 3,
+    "name": "versace",
+    "img": null,
+    "bdesc": null
+    },
+];
+export const pimages=[
+    {
+        id:1,
+        pid:1,
+        image:pimg1,
+    },
+     {
+        id:2,
+        pid:1,
+        image:pimg2,
+    },
+     {
+        id:3,
+        pid:1,
+        image:pimg3,
+    },
+    {
+        id:4,
+        pid:2,
+        image:pimg4,
+    },
+    {
+        id:5,
+        pid:3,
+        image:pimg5,
+    },
+    {
+        id:6,
+        pid:4,
+        image:pimg6,
+    },
+    {
+        id:7,
+        pid:4,
+        image:pimg8,
+    },
+    {
+        id:8,
+        pid:5,
+        image:pimg7,
+    },
+    {
+        id:9,
+        pid:5,
+        image:pimg10,
+    },
+    {
+        id:10,
+        pid:5,
+        image:pimg11,
+    },
+    {
+        id:11,
+        pid:6,
+        image:pimg15,
+    },
+    {
+        id:12,
+        pid:7,
+        image:pimg9,
+    },
+    {
+        id:13,
+        pid:6,
+        image:pimg16,
+    },
+    {
+        id:14,
+        pid:8,
+        image:pimg18,
+    },
+    {
+        id:15,
+        pid:7,
+        image:pimg17,
+    },
+    {
+        id:16,
+        pid:8,
+        image:pimg19,
+    },
+];
 
 export const termscondition=[
     {
